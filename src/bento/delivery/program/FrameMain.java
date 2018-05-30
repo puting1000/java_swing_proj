@@ -160,7 +160,7 @@ public class FrameMain extends JFrame {
 			menuItemDeletePeople.addActionListener(new ActionListener(){
 				@Override
 				public void actionPerformed(ActionEvent e) {					
-					NewPeopleDialog jDialog = new NewPeopleDialog();
+					DeletePeopleDialog jDialog = new DeletePeopleDialog();
 					jDialog.setVisible(true);					
 				}
 			});

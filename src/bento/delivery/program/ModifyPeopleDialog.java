@@ -29,7 +29,7 @@ public class ModifyPeopleDialog extends JDialog{
 	public JPanel getPanelSouth() {
 		if (panelSounth == null) {			
 			panelSounth = new JPanel();
-			panelSounth.add(new JButton("추가"));
+			panelSounth.add(new JButton("수정"));
 			panelSounth.add(new JButton("취소"));
 		}
 		return panelSounth;
@@ -70,6 +70,7 @@ public class ModifyPeopleDialog extends JDialog{
 	public JPanel getPeopleState(){
 		if(panelRadio==null){
 			panelRadio = new JPanel();
+			
 			panelRadio.setLayout(new GridLayout(1, 2));
 			panelRadio.add(getStateIn());
 			panelRadio.add(getStateOut());
@@ -83,8 +84,7 @@ public class ModifyPeopleDialog extends JDialog{
 	
 	public JRadioButton getStateIn(){
 		if(stateIn==null){
-			stateIn = new JRadioButton();
-			stateIn.add(new JRadioButton("재석중"));	
+			stateIn = new JRadioButton("재석중");
 			stateIn.setSelected(true);
 		};
 		return stateIn;
@@ -92,11 +92,9 @@ public class ModifyPeopleDialog extends JDialog{
 	
 	public JRadioButton getStateOut(){
 		if(stateOut==null){
-			stateOut = new JRadioButton();
-			stateOut.add(new JRadioButton("부재중"));		
+			stateOut = new JRadioButton("부재중");
 		};
 		return stateOut;
-	}
-	
+	}	
 	
 }
