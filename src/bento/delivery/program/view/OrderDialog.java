@@ -1,4 +1,4 @@
-package bento.delivery.program;
+package bento.delivery.program.view;
 
 public interface OrderDialog {
 	public void getPeopleName();

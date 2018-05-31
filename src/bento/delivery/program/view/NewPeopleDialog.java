@@ -1,14 +1,18 @@
-package bento.delivery.program;
+package bento.delivery.program.view;
 
 import java.awt.*;
 import javax.swing.*;
 
-public class DeletePeopleDialog extends JDialog {
+public class NewPeopleDialog extends JDialog {
+	// :: 새로운 사람을 만드는 다이얼로그
+	// 새로운 이름과 직위를 입력
+	// 추가를 누르면 데이터베이스에 추가
 	private JPanel panelCenter, panelSounth;
-	private JLabel labelName, labelPosion;
+	private JTextField txtName;
+	private JComboBox listPosion;
 
-	public DeletePeopleDialog() {
-		this.setTitle("사원 삭제");
+	public NewPeopleDialog() {
+		this.setTitle("사원 추가");
 		this.setSize(300, 150);
 		
 		this.getContentPane().add(getPanelCenter(),BorderLayout.NORTH);
@@ -22,7 +26,7 @@ public class DeletePeopleDialog extends JDialog {
 	public JPanel getPanelSouth() {
 		if (panelSounth == null) {			
 			panelSounth = new JPanel();
-			panelSounth.add(new JButton("삭제"));
+			panelSounth.add(new JButton("추가"));
 			panelSounth.add(new JButton("취소"));
 		}
 		return panelSounth;
@@ -39,21 +43,23 @@ public class DeletePeopleDialog extends JDialog {
 		}
 		return panelCenter;
 	
-	}
+	}	
 	
-	
-	public JLabel getPeopleName() {
-		if(labelName==null){
-			labelName = new JLabel("홍길동");
+	public JTextField getPeopleName() {
+		if(txtName==null){
+			txtName = new JTextField();
 		}
-		return labelName;
+		return txtName;
 	}
 
-	public  JLabel getPeoplePosition() {
-		if(labelPosion==null){			
-			labelPosion = new JLabel("사원");
-			
+	public  JComboBox getPeoplePosition() {
+		if(listPosion==null){
+			String[] arrPosition = {
+				"부장","차장","과장","대리","주임","사원"
+			};
+			listPosion = new JComboBox(arrPosition);			
 		}		
-		return labelPosion;
+		return listPosion;
 	}
+
 }

@@ -1,4 +1,6 @@
-package bento.delivery.program;
+package bento.delivery.program.client;
+
+import bento.delivery.program.controller.FrameMain;
 
 public class ProgramClient {
 	

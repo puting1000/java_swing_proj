@@ -1,9 +1,13 @@
-package bento.delivery.program;
+package bento.delivery.program.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.*;
+
+import bento.delivery.program.view.DeletePeopleDialog;
+import bento.delivery.program.view.ModifyPeopleDialog;
+import bento.delivery.program.view.NewPeopleDialog;
 
 public class FrameMain extends JFrame {
 	private JMenuBar jMenuBar;

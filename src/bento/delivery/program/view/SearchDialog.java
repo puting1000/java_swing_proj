@@ -1,4 +1,4 @@
-package bento.delivery.program;
+package bento.delivery.program.view;
 
 public interface SearchDialog {
 	// 사람이름이나 메뉴이름으로 검색
